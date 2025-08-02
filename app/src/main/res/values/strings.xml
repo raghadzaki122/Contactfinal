@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contact Manager</string>
+    <string name="contact_name">Raghad Adil</string>
+    <string name="contact_notes_hint">Add notes about this contact...</string>
+    <string name="save_contact">Save Contact</string>
+    <string name="contact_notes_label">Notes:</string>
+    <string name="contact_photo">Contact Photo</string>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/padding_medium"
+    >
+
+    <!-- Contact Image and Name Section -->
+    <LinearLayout
+        android:id="@+id/llContactHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Contact Image -->
+        <ImageView
+            android:id="@+id/ivContactImage"
+            android:layout_width="@dimen/contact_image_size"
+            android:layout_height="@dimen/contact_image_size"
+            android:src="@drawable/contact_placeholder"
+            android:background="@color/light_gray"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/contact_photo"
+            android:layout_marginBottom="@dimen/margin_medium" />
+
+        <!-- Contact Name -->
+        <TextView
+            android:id="@+id/tvContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_name"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Notes Section -->
+    <FrameLayout
+        android:id="@+id/flNotesSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintTop_toBottomOf="@id/llContactHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Notes Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_notes_label"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+            <!-- Notes EditText -->
+            <EditText
+                android:id="@+id/etContactNotes"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="@string/contact_notes_hint"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/text_secondary"
+                android:background="@color/light_gray"
+                android:padding="@dimen/padding_medium"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSaveContact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/save_contact"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        android:background="@color/accent_green"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/flNotesSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
